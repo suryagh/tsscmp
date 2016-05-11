@@ -1,0 +1,37 @@
+{
+  "name": "tsscmp",
+  "version": "1.0.0",
+  "description": "timing safe string compare, using double hmac",
+  "main": "lib/index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "node test/index-test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/suryagh/tsscmp.git"
+  },
+  "keywords": [
+    "timing safe string compare",
+    "double hmac string compare",
+    "safe string compare",
+    "compare",
+    "double",
+    "hmac"
+  ],
+  "author": "suryagh",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "engines": {
+    "node": ">=0.6.x"
+  },
+  "engineStrict": true,
+  "licenses": [
+    {
+      "type": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  ]
+}
