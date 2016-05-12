@@ -1,8 +1,14 @@
 # Timing safe string compare using double hmac
+[![travis][travis-image]][travis-url]
+[![npm][npm-image]][npm-url]
+
+[travis-image]: https://travis-ci.org/suryagh/tsscmp.svg?branch=master
+[travis-url]: https://travis-ci.org/suryagh/tsscmp
+
 [npm-image]: https://img.shields.io/npm/v/tsscmp.svg?style=flat
 [npm-url]: https://npmjs.org/package/tsscmp
 
-Prevents timing attacks using Brad Hill's [Double HMAC pattern from](https://www.nccgroup.trust/us/about-us/newsroom-and-events/blog/2011/february/double-hmac-verification/) to perform __safe string comparison__. The approach is similar to the node's native implementation of timing safe buffer comparison that will be available on [v6+](https://github.com/nodejs/node/issues/3043).
+Prevents timing attacks using Brad Hill's [Double HMAC pattern](https://www.nccgroup.trust/us/about-us/newsroom-and-events/blog/2011/february/double-hmac-verification/) to perform __safe string comparison__. The approach is similar to the node's native implementation of timing safe buffer comparison that will be available on [v6+](https://github.com/nodejs/node/issues/3043).
 
 Double HMAC avoids the timing atacks by blinding the timing channel using *random time per attempt* comparison against iterative brute force attacks.
 

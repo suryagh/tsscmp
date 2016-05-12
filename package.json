@@ -1,7 +1,7 @@
 {
   "name": "tsscmp",
-  "version": "1.0.0",
-  "description": "timing safe string compare, using double hmac",
+  "version": "1.0.1",
+  "description": "Timing safe string compare using double HMAC",
   "main": "lib/index.js",
   "dependencies": {},
   "devDependencies": {},
