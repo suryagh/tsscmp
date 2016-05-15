@@ -7,7 +7,6 @@ process.on('error', function (e) {
 	console.log('caught: ' + e);
 });
 
-
 function testEqual(a, b) {
 	assert(timeSafeCompare(a, b));
 
@@ -22,6 +21,9 @@ function testNotEqual(a, b) {
 	assert(a !== b);
 }
 
+// note: lets also make sure tsscmp can be inline replaced for any types -
+// just incase if anyone is interested
+
 // positive tests
 testEqual('127e6fbfe24a750e72930c220a8e138275656b8e5d8f48a98c3c92df2caba935',
 	'127e6fbfe24a750e72930c220a8e138275656b8e5d8f48a98c3c92df2caba935',
@@ -34,6 +36,10 @@ testEqual(false, false);
 (function () {
 	var a = { a: 1 };
 	testEqual(a, a);
+})();
+(function () {
+	function f1() { return 1; };
+	testEqual(f1, f1);
 })();
 
 // negative tests
@@ -55,4 +61,9 @@ testNotEqual([1, 2], [1, 2, 3]);
 	var b = { p: 1 };
 	testNotEqual(a, b);
 })();
-console.log('Success: all tests complete.')
+(function () {
+	function f1() { return 1; };
+	function f2() { return 1; };
+	testNotEqual(f1, f2);
+})();
+console.log('Success: all tests complete.');
