@@ -51,3 +51,10 @@ if (timingSafeCompare(sessionToken, givenToken)) {
   console.log('bad token');
 }
 ```
+## Credits to
+[@jsha](https://github.com/jsha)</br>
+[@bnoordhuis](https://github.com/bnoordhuis)
+
+## License
+
+  [MIT](LICENSE)
