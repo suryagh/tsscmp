@@ -1,14 +1,17 @@
-# Timing safe string compare using double hmac
+# Timing safe string compare using double HMAC
 [![Node.js Version][node-version-image]][node-version-url]
 [![npm][npm-image]][npm-url]
 [![NPM Downloads][downloads-image]][downloads-url]
 [![Build Status][travis-image]][travis-url]
+[![Build Status][appveyor-image]][appveyor-url]
 [![Dependency Status][david-image]][david-url]
 [![License][license-image]][license-url]
 
 
 [travis-image]: https://travis-ci.org/suryagh/tsscmp.svg?branch=master
 [travis-url]: https://travis-ci.org/suryagh/tsscmp
+[appveyor-image]: https://ci.appveyor.com/api/projects/status/github/suryagh/tsscmp?branch=master&passingText=window&failingText=windows&svg=true
+[appveyor-url]: https://ci.appveyor.com/project/suryagh/tsscmp
 [npm-image]: https://img.shields.io/npm/v/tsscmp.svg?style=flat
 [npm-url]: https://npmjs.org/package/tsscmp
 [node-version-image]: https://img.shields.io/node/v/tsscmp.svg

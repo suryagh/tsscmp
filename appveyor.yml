@@ -1,7 +1,7 @@
 # Test against this version of Node.js
 environment:
   matrix:
-   - nodejs_version: "0.6"
+   # nodejs_version: "0.6" not supported  in Windows x86
    - nodejs_version: "0.8"
    - nodejs_version: "0.10"
    - nodejs_version: "0.11"
