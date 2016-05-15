@@ -47,7 +47,7 @@ testNotEqual(false, undefined);
 testNotEqual(function () { }, function () { });
 testNotEqual({}, {});
 testNotEqual({ a: 1 }, { a: 1 });
-testNotEqual({ a: 1 }, { a: 1 });
+testNotEqual({ a: 1 }, { a: 2 });
 testNotEqual([1, 2], [1, 2]);
 testNotEqual([1, 2], [1, 2, 3]);
 (function () {
