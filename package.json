@@ -27,6 +27,5 @@
   "engines": {
     "node": ">=0.6.x"
   },
-  "engineStrict": true,
   "license": "MIT"
 }

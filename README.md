@@ -5,24 +5,29 @@
 [![Build Status][travis-image]][travis-url]
 [![Build Status][appveyor-image]][appveyor-url]
 [![Dependency Status][david-image]][david-url]
-[![License][license-image]][license-url]
+[![github-license][github-license-image]][license-url]
 
-
-[travis-image]: https://travis-ci.org/suryagh/tsscmp.svg?branch=master
+[travis-image]: https://img.shields.io/travis/suryagh/tsscmp/master.svg?style=flat-square
 [travis-url]: https://travis-ci.org/suryagh/tsscmp
-[appveyor-image]: https://ci.appveyor.com/api/projects/status/github/suryagh/tsscmp?branch=master&passingText=window&failingText=windows&svg=true
-[appveyor-url]: https://ci.appveyor.com/project/suryagh/tsscmp
-[npm-image]: https://img.shields.io/npm/v/tsscmp.svg?style=flat
-[npm-url]: https://npmjs.org/package/tsscmp
-[node-version-image]: https://img.shields.io/node/v/tsscmp.svg
-[node-version-url]: https://nodejs.org/en/download
-[downloads-image]: https://img.shields.io/npm/dm/tsscmp.svg
-[downloads-url]: https://npmjs.org/package/tsscmp
-[david-image]: http://img.shields.io/david/suryagh/tsscmp.svg
-[david-url]: https://david-dm.org/suryagh/tsscmp
-[license-image]: http://img.shields.io/npm/l/tsscmp.svg
-[license-url]: LICENSE
 
+[appveyor-image]: https://img.shields.io/appveyor/ci/suryagh/tsscmp/master.svg?style=flat-square&label=windows
+[appveyor-url]: https://ci.appveyor.com/project/suryagh/tsscmp
+
+[npm-image]: https://img.shields.io/npm/v/tsscmp.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/tsscmp
+
+[node-version-image]: https://img.shields.io/node/v/tsscmp.svg?style=flat-square
+[node-version-url]: https://nodejs.org/en/download
+
+[downloads-image]: https://img.shields.io/npm/dm/tsscmp.svg?style=flat-square
+[downloads-url]: https://npmjs.org/package/tsscmp
+
+[david-image]: http://img.shields.io/david/suryagh/tsscmp.svg?style=flat-square
+[david-url]: https://david-dm.org/suryagh/tsscmp
+
+[npm-license-image]: http://img.shields.io/npm/l/tsscmp.svg?style=flat-square
+[github-license-image]: https://img.shields.io/github/license/suryagh/tsscmp.svg?style=flat-square
+[license-url]: LICENSE
 
 Prevents timing attacks using Brad Hill's [Double HMAC pattern](https://www.nccgroup.trust/us/about-us/newsroom-and-events/blog/2011/february/double-hmac-verification/) to perform __safe string comparison__. The approach is similar to the node's native implementation of timing safe buffer comparison that will be available on [v6+](https://github.com/nodejs/node/issues/3043).
 
