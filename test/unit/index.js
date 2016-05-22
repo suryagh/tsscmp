@@ -1,7 +1,7 @@
 'use strict';
 
 var assert = require('assert');
-var timeSafeCompare = require('../lib/index');
+var timeSafeCompare = require('../../lib/index');
 
 process.on('error', function (e) {
 	console.log('caught: ' + e);

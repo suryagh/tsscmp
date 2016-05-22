@@ -6,7 +6,7 @@
   "dependencies": {},
   "devDependencies": {},
   "scripts": {
-    "test": "node test/index-test.js"
+    "test": "node test/unit && node test/benchmark"
   },
   "repository": {
     "type": "git",
