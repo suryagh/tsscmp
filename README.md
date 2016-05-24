@@ -1,3 +1,4 @@
+# Timing safe string compare using double HMAC
 [![Node.js Version][node-version-image]][node-version-url]
 [![npm][npm-image]][npm-url]
 [![NPM Downloads][downloads-image]][downloads-url]
@@ -20,7 +21,6 @@
 [npm-license-image]: http://img.shields.io/npm/l/tsscmp.svg?style=flat-square
 [github-license-image]: https://img.shields.io/github/license/suryagh/tsscmp.svg?style=flat-square
 [license-url]: LICENSE
-# Timing safe string compare using double HMAC
 Prevents [timing attacks](http://codahale.com/a-lesson-in-timing-attacks/) using Brad Hill's
 [Double HMAC pattern](https://www.nccgroup.trust/us/about-us/newsroom-and-events/blog/2011/february/double-hmac-verification/)
 to perform secure string comparison. Double HMAC avoids the timing atacks by blinding the
@@ -33,17 +33,17 @@ timing channel using random time per attempt comparison against iterative brute 
 npm install tsscmp
 ```
 ## Why
-High level languages like JavaScript cannot perform
-[reliable](https://github.com/nodejs/node-v0.x-archive/issues/8560#issuecomment-59521094)
-constant-time string comparison because of the many layers of software and hardware optimizers.
+To compare secret values like **authentication tokens**, **passwords** or
+**capability urls** so that timing information is not
+leaked to the attacker.
 
 ## Example
 
 ```js
 var timingSafeCompare = require('tsscmp');
 
-var sessionToken = '127e6fbfe24a750e72930c220a8e138275656b8e5d8f48a98c3c92df2caba935 ';
-var givenToken = '127e6fbfe24a750e72930c220a8e138275656b8e5d8f48a98c3c92df2caba935 ';
+var sessionToken = '127e6fbfe24a750e72930c';
+var givenToken = '127e6fbfe24a750e72930c';
 
 if (timingSafeCompare(sessionToken, givenToken)) {
   console.log('good token');
@@ -53,8 +53,9 @@ if (timingSafeCompare(sessionToken, givenToken)) {
 ```
 ## Credits to
 [@jsha](https://github.com/jsha)</br>
-[@bnoordhuis](https://github.com/bnoordhuis)
+[@bnoordhuis](https://github.com/bnoordhuis)</br>
+[@suryagh](https://github.com/suryagh)
 
 ## License
-
-  [MIT](LICENSE)
+ [MIT](LICENSE)
+ 
