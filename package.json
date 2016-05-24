@@ -1,6 +1,6 @@
 {
   "name": "tsscmp",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Timing safe string compare using double HMAC",
   "main": "lib/index.js",
   "dependencies": {},
@@ -16,8 +16,6 @@
     "timing safe string compare",
     "double hmac string compare",
     "safe string compare",
-    "compare",
-    "double",
     "hmac"
   ],
   "author": "suryagh",
