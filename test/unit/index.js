@@ -1,10 +1,8 @@
-'use strict';
+import assert from 'assert';
+import timeSafeCompare from '../../lib/index';
 
-var assert = require('assert');
-var timeSafeCompare = require('../../lib/index');
-
-process.on('error', function (e) {
-	console.log('caught: ' + e);
+process.on('error', e => {
+	console.log(`caught: ${e}`);
 });
 
 function testEqual(a, b) {
@@ -33,14 +31,14 @@ testEqual('', '');
 testEqual(undefined, undefined);
 testEqual(true, true);
 testEqual(false, false);
-(function () {
-	var a = { a: 1 };
+((() => {
+	const a = { a: 1 };
 	testEqual(a, a);
-})();
-(function () {
+}))();
+((() => {
 	function f1() { return 1; };
 	testEqual(f1, f1);
-})();
+}))();
 
 // negative tests
 testNotEqual('');
@@ -50,20 +48,20 @@ testNotEqual('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'a');
 testNotEqual('alpha', 'beta');
 testNotEqual(false, true);
 testNotEqual(false, undefined);
-testNotEqual(function () { }, function () { });
+testNotEqual(() => { }, () => { });
 testNotEqual({}, {});
 testNotEqual({ a: 1 }, { a: 1 });
 testNotEqual({ a: 1 }, { a: 2 });
 testNotEqual([1, 2], [1, 2]);
 testNotEqual([1, 2], [1, 2, 3]);
-(function () {
-	var a = { p: 1 };
-	var b = { p: 1 };
+((() => {
+	const a = { p: 1 };
+	const b = { p: 1 };
 	testNotEqual(a, b);
-})();
-(function () {
+}))();
+((() => {
 	function f1() { return 1; };
 	function f2() { return 1; };
 	testNotEqual(f1, f2);
-})();
+}))();
 console.log('Success: all tests complete.');
