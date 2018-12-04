@@ -11,7 +11,7 @@
 
 Prevents [timing attacks](http://codahale.com/a-lesson-in-timing-attacks/) using Brad Hill's
 [Double HMAC pattern](https://www.nccgroup.trust/us/about-us/newsroom-and-events/blog/2011/february/double-hmac-verification/)
-to perform secure string comparison. Double HMAC avoids the timing atacks by blinding the
+to perform secure string comparison. Double HMAC avoids the timing attacks by blinding the
 timing channel using random time per attempt comparison against iterative brute force attacks.
 
 
