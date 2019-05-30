@@ -39,7 +39,7 @@ if (timingSafeCompare(sessionToken, givenToken)) {
   console.log('bad token');
 }
 ```
-##License: 
+## License
 [MIT](LICENSE)
 
 **Credits to:**  [@jsha](https://github.com/jsha) |
